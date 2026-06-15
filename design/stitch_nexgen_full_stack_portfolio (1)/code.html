@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DEV_CORE v1.0 - Experience &amp; Projects</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Montserrat:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-primary": "#00677e",
+                      "surface-container-high": "#262939",
+                      "surface": "#0f1321",
+                      "secondary-fixed-dim": "#d0bcff",
+                      "on-surface": "#dfe1f6",
+                      "primary": "#a8e8ff",
+                      "on-primary": "#003642",
+                      "secondary": "#d0bcff",
+                      "on-primary-container": "#00586b",
+                      "on-secondary-fixed": "#23005c",
+                      "on-surface-variant": "#bbc9cf",
+                      "primary-fixed-dim": "#3cd7ff",
+                      "on-primary-fixed": "#001f27",
+                      "background": "#0f1321",
+                      "surface-container-highest": "#303444",
+                      "tertiary-fixed": "#dae2fd",
+                      "primary-container": "#00d4ff",
+                      "secondary-container": "#571bc1",
+                      "inverse-on-surface": "#2c303f",
+                      "surface-bright": "#353849",
+                      "on-tertiary-container": "#485065",
+                      "inverse-surface": "#dfe1f6",
+                      "outline-variant": "#3c494e",
+                      "surface-container": "#1b1f2e",
+                      "outline": "#859398",
+                      "on-error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#004e5f",
+                      "on-tertiary-fixed": "#131b2e",
+                      "surface-tint": "#3cd7ff",
+                      "surface-dim": "#0f1321",
+                      "primary-fixed": "#b4ebff",
+                      "surface-variant": "#303444",
+                      "tertiary-fixed-dim": "#bec6e0",
+                      "on-secondary-container": "#c4abff",
+                      "error-container": "#93000a",
+                      "on-secondary-fixed-variant": "#5516be",
+                      "on-secondary": "#3c0091",
+                      "on-tertiary-fixed-variant": "#3f465c",
+                      "tertiary": "#d7def9",
+                      "on-error": "#690005",
+                      "surface-container-low": "#171b2a",
+                      "on-background": "#dfe1f6",
+                      "surface-container-lowest": "#0a0d1c",
+                      "on-tertiary": "#283044",
+                      "error": "#ffb4ab",
+                      "secondary-fixed": "#e9ddff",
+                      "tertiary-container": "#bbc2dc"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-padding-mobile": "64px",
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "section-padding-desktop": "120px",
+                      "container-max": "1440px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Montserrat"
+                      ],
+                      "label-mono": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "display-lg-mobile": [
+                              "Montserrat"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "72px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "900"
+                              }
+                      ],
+                      "label-mono": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "letterSpacing": "0em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "900"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "letterSpacing": "0em",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            },
+          }
+      </script>
+<style>
+        body {
+            background-color: #0f1321;
+            color: #dfe1f6;
+            overflow-x: hidden;
+        }
+        
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid transparent;
+            border-image: linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0.05)) 1;
+        }
+
+        .neon-glow:hover {
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+            transform: scale(1.02);
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-glow {
+            box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+
+        /* Particles Background */
+        .particles-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 50% 50%, rgba(87, 27, 193, 0.1) 0%, transparent 60%);
+        }
+      </style>
+</head>
+<body class="antialiased selection:bg-primary-container selection:text-on-primary-container">
+<div class="particles-bg" id="particles"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 border-b border-white/20 bg-surface/40 backdrop-blur-20 shadow-[0_0_30px_rgba(0,212,255,0.1)]">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-label-mono text-label-mono text-primary tracking-widest uppercase">
+                DEV_CORE v1.0
+            </div>
+<div class="hidden md:flex items-center gap-8 font-label-mono text-label-mono">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="#">Portfolio</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 Active: scale-95 duration-200 transition-transform" href="#">Experience</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="#">Services</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="#">Contact</a>
+</div>
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary font-label-mono text-label-mono px-6 py-2 rounded font-bold hover:scale-105 hover:shadow-[0_0_20px_rgba(0,212,255,0.3)] transition-all">
+                Hire Me
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-section-padding-mobile md:pb-section-padding-desktop max-w-container-max mx-auto px-gutter">
+<!-- Header Section -->
+<header class="mb-24 text-center">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-4">
+                Systems &amp; <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Solutions</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Engineering high-performance web applications and resilient backend architectures. A curated timeline of technical execution.
+            </p>
+</header>
+<!-- Experience Timeline -->
+<section class="mb-32">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-12 flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">history</span> Experience Log
+            </h2>
+<div class="relative pl-8 md:pl-12 border-l-2 border-surface-container-high space-y-16">
+<!-- Timeline Item 1 -->
+<div class="relative">
+<div class="absolute -left-[41px] md:-left-[57px] top-1 w-4 h-4 rounded-full bg-primary timeline-glow"></div>
+<div class="glass-panel p-8 rounded-lg neon-glow">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+<div>
+<h3 class="font-headline-md text-[24px] text-on-surface font-bold">Senior Full Stack Engineer</h3>
+<p class="font-label-mono text-label-mono text-secondary mt-1">NexTech Solutions</p>
+</div>
+<span class="font-label-mono text-label-mono text-on-surface-variant mt-2 md:mt-0 bg-surface-container-highest px-3 py-1 rounded">2021 - Present</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Spearheaded the migration of legacy monolith to microservices architecture using Node.js and Docker. Reduced system latency by 40% and improved deployment frequency.
+                        </p>
+<div class="flex flex-wrap gap-2">
+<span class="text-[12px] font-label-mono px-2 py-1 border border-outline-variant rounded text-primary-fixed-dim">Node.js</span>
+<span class="text-[12px] font-label-mono px-2 py-1 border border-outline-variant rounded text-primary-fixed-dim">React</span>
+<span class="text-[12px] font-label-mono px-2 py-1 border border-outline-variant rounded text-primary-fixed-dim">Docker</span>
+<span class="text-[12px] font-label-mono px-2 py-1 border border-outline-variant rounded text-primary-fixed-dim">AWS</span>
+</div>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative">
+<div class="absolute -left-[41px] md:-left-[57px] top-1 w-4 h-4 rounded-full bg-surface-variant border-2 border-primary-fixed-dim"></div>
+<div class="glass-panel p-8 rounded-lg transition-transform duration-300 hover:scale-[1.01]">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+<div>
+<h3 class="font-headline-md text-[24px] text-on-surface font-bold">Frontend Developer</h3>
+<p class="font-label-mono text-label-mono text-secondary mt-1">Creative Cloud Inc.</p>
+</div>
+<span class="font-label-mono text-label-mono text-on-surface-variant mt-2 md:mt-0 bg-surface-container-highest px-3 py-1 rounded">2018 - 2021</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Developed interactive dashboards and real-time data visualization tools. Collaborated with UI/UX team to implement complex animations and maintain high accessibility standards.
+                        </p>
+<div class="flex flex-wrap gap-2">
+<span class="text-[12px] font-label-mono px-2 py-1 border border-outline-variant rounded text-primary-fixed-dim">Vue.js</span>
+<span class="text-[12px] font-label-mono px-2 py-1 border border-outline-variant rounded text-primary-fixed-dim">D3.js</span>
+<span class="text-[12px] font-label-mono px-2 py-1 border border-outline-variant rounded text-primary-fixed-dim">SASS</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Grid -->
+<section>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-12 flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">code_blocks</span> Featured Projects
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project Card 1 -->
+<div class="glass-panel rounded-xl overflow-hidden flex flex-col neon-glow group">
+<div class="h-48 bg-surface-container-highest relative overflow-hidden">
+<img alt="Data Dashboard UI" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300 mix-blend-luminosity group-hover:mix-blend-normal" data-alt="A sleek, futuristic data dashboard interface displayed on a high-resolution screen in a dark room. The UI features glowing neon blue and purple charts, graphs, and holographic data visualizations. The setting is a sophisticated tech command center with subtle reflections on the glass desk. The atmosphere is highly technical, polished, and indicative of advanced data analytics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkzzyJqRK-Www7lCykzEVKz1L55nxlLJg-s2b4IfIYN3tNaDh49wvfAMHawYIk42NCn5i2NhW_m6Nnos3ICANvSKDTX1famBmPxchwtR5NFvob6gk_iLdOI-2xWIrrTXI5atrqBVwICUnXx2mDxtyyFfBy-7VVdsc8_gNCtdYmf5lwbxgJ64mcAn1NMafwj1BpIaieRn42Oyz2vmYzod2w_45oPX9j5qDNlgaMusGdtht1q5h2J5c9G7spCTtb2e0DVC-NJyUYrBE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0f1321] to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="font-headline-md text-[20px] text-on-surface font-bold mb-2">Nexus Analytics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">
+                            A real-time analytics platform handling millions of events per minute. Features a custom query engine and dynamic visualization engine.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="text-[10px] font-label-mono bg-surface-container px-2 py-1 rounded text-primary">React</span>
+<span class="text-[10px] font-label-mono bg-surface-container px-2 py-1 rounded text-primary">GraphQL</span>
+<span class="text-[10px] font-label-mono bg-surface-container px-2 py-1 rounded text-primary">PostgreSQL</span>
+</div>
+<div class="flex gap-4 border-t border-white/10 pt-4">
+<a class="flex items-center gap-2 font-label-mono text-label-mono text-secondary hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span> Live Demo
+                            </a>
+<a class="flex items-center gap-2 font-label-mono text-label-mono text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">code</span> Source
+                            </a>
+</div>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="glass-panel rounded-xl overflow-hidden flex flex-col neon-glow group">
+<div class="h-48 bg-surface-container-highest relative overflow-hidden">
+<img alt="E-Commerce Architecture" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300 mix-blend-luminosity group-hover:mix-blend-normal" data-alt="A conceptual 3D rendering of a modern cloud architecture layout featuring glowing nodes and interconnected data streams. The visual style is isometric, set against a deep space dark background with electric blue and purple energy pulses. It conveys high-performance serverless computing and complex backend infrastructure. The overall aesthetic is clean, expert, and highly polished." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyFFBKnDy4PiIcmvzlildtQkjbks8QK1THJf8i5ns29jOww5cI1jwzVo3AA9xJPgLJFR9cvaCkPJqGDXsztLMrJGoDfkwBU_KKxR7KnXevfFoCrhHcGFN3U3wK7EuPZnQu-EeMDAkPCAvVgkab-aIy7-zaBxjqx2u2YB7_jgH7i4gixUHtF6sxu-mR29O9bJ-ySEKNwVw0RhO3NNE2BWp3-3kVFnccS455gbAqFexUa0UToq7iMXwszrSrZkMD7_YUk6Y5vOx7fhs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0f1321] to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="font-headline-md text-[20px] text-on-surface font-bold mb-2">AeroStore Engine</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">
+                            Headless e-commerce backend built with microservices. Implements event-driven inventory management and distributed caching.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="text-[10px] font-label-mono bg-surface-container px-2 py-1 rounded text-primary">Node.js</span>
+<span class="text-[10px] font-label-mono bg-surface-container px-2 py-1 rounded text-primary">Redis</span>
+<span class="text-[10px] font-label-mono bg-surface-container px-2 py-1 rounded text-primary">Kafka</span>
+</div>
+<div class="flex gap-4 border-t border-white/10 pt-4">
+<a class="flex items-center gap-2 font-label-mono text-label-mono text-secondary hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span> API Docs
+                            </a>
+<a class="flex items-center gap-2 font-label-mono text-label-mono text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">code</span> Source
+                            </a>
+</div>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="glass-panel rounded-xl overflow-hidden flex flex-col neon-glow group">
+<div class="h-48 bg-surface-container-highest relative overflow-hidden">
+<img alt="Code Editor Web App" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300 mix-blend-luminosity group-hover:mix-blend-normal" data-alt="A close-up shot of a sleek, dark-themed code editor on a monitor, displaying lines of JavaScript syntax highlighted in vibrant cyan and magenta. The monitor is in a dark, moody environment with subtle RGB backlighting glowing softly on the desk surface. The image emphasizes technical precision and modern developer tools, maintaining the glassmorphism and deep space brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDszE65trnl35YWt9kKYA4eCvZ-KUrfaWUhWCfmKdngQXk3Lc0Bjv5a3YCl4UuyxGGxzpFWKQ2Ak4DiJkS5_NGlAERlgKCilyJ22yZgc1YurPT6nh0PL9OEcAj_R0b05Oyxbl1SXvMhuLLeWf-osl4Dp8nDGPCwDxe1qec341Q9rMZWwIytLOcZSXsm7RJ_GoZB_wTcpjIDTxvgy0f1Kn648gJrNrmksdLixAML_baUysMYw3ZlP69tSiLNA4YhftWxgnc0TU3wUsY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0f1321] to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="font-headline-md text-[20px] text-on-surface font-bold mb-2">DevSync IDE</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">
+                            Browser-based collaborative code editor with real-time syncing, syntax highlighting, and integrated terminal via WebSockets.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="text-[10px] font-label-mono bg-surface-container px-2 py-1 rounded text-primary">Vue 3</span>
+<span class="text-[10px] font-label-mono bg-surface-container px-2 py-1 rounded text-primary">WebSockets</span>
+<span class="text-[10px] font-label-mono bg-surface-container px-2 py-1 rounded text-primary">Monaco</span>
+</div>
+<div class="flex gap-4 border-t border-white/10 pt-4">
+<a class="flex items-center gap-2 font-label-mono text-label-mono text-secondary hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span> Try Beta
+                            </a>
+<a class="flex items-center gap-2 font-label-mono text-label-mono text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">code</span> Source
+                            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-section-padding-mobile md:py-12 border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto gap-4">
+<div class="font-label-mono text-primary font-label-mono">
+                © 2024 DEV_CORE. ENGINEERED FOR PERFORMANCE.
+            </div>
+<div class="flex gap-6 font-label-mono text-label-mono">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Twitter</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Email</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple ambient particle animation effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const particles = document.getElementById('particles');
+            let mouseX = 0;
+            let mouseY = 0;
+
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                
+                // Subtle gradient shift based on mouse position
+                const xPercent = (mouseX / window.innerWidth) * 100;
+                const yPercent = (mouseY / window.innerHeight) * 100;
+                
+                particles.style.background = `radial-gradient(circle at ${xPercent}% ${yPercent}%, rgba(87, 27, 193, 0.15) 0%, transparent 60%)`;
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiregna Dereje Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">JD</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="home-container">
+            <div class="home-content">
+                <h1 class="home-title">
+                    <span class="typewriter" id="typewriter">Hi, I'm Jiregna Dereje</span>
+                </h1>
+                <p class="home-subtitle">Software Developer</p>
+                <p class="home-description">
+                   Welcome i'm Jiregna Dereje, a profetional software developer and full stack developer,
+                    I create beautiful, responsive websites and web applications 
+                    using modern technologies. Passionate about clean code and 
+                    user experience.About Me
+                    I’m a Full Stack Developer who also works with Data Science, Machine Learning, 
+                    AI, Mobile App Development, and Design. 
+                    I enjoy creating smart and easy-to-use apps and websites that help people and solve real problems.
+                </p>
+                <div class="home-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="home-image">
+                <div class="profile-image">
+                    <img class="profile-default" src="assets/Screenshot_20250202_164718_Photo Editor.jpg" alt="Profile">
+                    <img class="profile-hover" src="assets/Screenshot_20250421_112742_Gallery.jpg" alt="Profile alternate">
+                    <div class="image-placeholder" style="display: none;">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="scroll-indicator" id="scroll-indicator" type="button" aria-label="Scroll down">
+            <div class="scroll-arrow"></div>
+        </button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="profile-image">
+                            <img class="profile-default" src="assets/Screenshot_20250202_164718_Photo Editor.jpg" alt="Profile">
+                            <img class="profile-hover" src="assets/Screenshot_20250421_112742_Gallery.jpg" alt="Profile alternate">
+                        <div class="image-placeholder" style="display: none;">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Hello! I'm Jiregna Dereje</h3>
+                    <p>
+                        I'm a passionate web developer with a love for creating 
+                        digital experiences that make a difference. With a strong 
+                        foundation in front-end technologies, I enjoy turning 
+                        complex problems into simple, beautiful designs.
+                    </p>
+                    <p>
+                        When I'm not coding, you can find me exploring new 
+                        technologies, contributing to open-source projects, or 
+                        enjoying a good cup of coffee while reading about the 
+                        latest web development trends.
+                    </p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Addis Ababa, Ethiopia</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>jiregnadereje35@gmail.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Information Technology Degree</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>2+ Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+            <div class="projects-grid" id="projects-grid" data-projects='[
+                {
+                    "id": 1,
+                    "title": "OSI Model Interactive Guide",
+                    "description": "An interactive web application designed to help users understand the seven layers of the OSI networking model. The platform provides detailed explanations of each layer and the protocols used in network communication. It includes interactive learning tools such as layer visualization, protocol exploration, network simulations, layer comparisons, quizzes for knowledge testing, and interview preparation questions.",
+                    "image": "assets/osi.png",
+                    "category": "web",
+                    "technologies": ["Python","Django","HTML", "CSS", "JavaScript"],
+                    "liveLink": "https://osi-model-interactive-guide.onrender.com",
+                    "githubLink": "https://github.com/JDjire/OSI-Model-Interactive-Guide"
+                },
+                {
+                    "id": 2,
+                    "title": "Weather Web App",
+                    "description": "A modern weather application that allows users to search for any city and view real-time weather data using a React frontend and Node.js backend.",
+                    "image": "assets/Weather App.png",
+                    "category": "web",
+                    "technologies": ["React","Vite", "TailwindCSS","Framer Motion","Lucide-React","Axios","Node.js","Express.js","dotenv","cors","Nodemon"],
+                    "liveLink": "https://jd-weather-app-tau.vercel.app/",
+                    "githubLink": "https://github.com/JDjire/weather-app"
+                },
+                {
+                    "id": 3,
+                    "title": "Responsive Landing Page",
+                    "description": "A responsive landing page with an interactive navigation menu built during my Web Development Internship at Prodigy InfoTech. The project features a fixed navigation bar that changes style on scroll and includes hover effects for better user interaction. Built using React.js, Tailwind CSS, and JavaScript with a focus on responsive and modern UI design.",
+                    "image": "assets/Responsive Landing Page.png",
+                    "category": "web",
+                    "technologies": ["React.js", "Tailwind CSS", "JavaScript", "HTML5"],
+                    "liveLink": "https://responsive-landing-page-ten-nu.vercel.app/",
+                    "githubLink": "https://github.com/JDjire/PRODIGY_WD_01"
+                },
+                {
+                    "id": 4,
+                    "title": "Stopwatch Web Application",
+                    "description": "A modern stopwatch web application built using React.js and Tailwind CSS as part of the Prodigy InfoTech Web Development Internship (Task-02). The app includes start, pause, reset, and lap tracking features with a responsive and user-friendly interface.",
+                    "image": "assets/Stopwatch Web Application.png",
+                    "category": "web",
+                    "technologies": ["React.js", "Tailwind CSS", "JavaScript", "HTML5"],
+                    "liveLink": "https://stopwatch-web-iota.vercel.app/",
+                    "githubLink": "https://github.com/JDjire/PRODIGY_WD_02"
+                },
+                {
+                    "id": 5,
+                    "title": "Tic-Tac-Toe Web Application",
+                    "description": "A modern Tic-Tac-Toe web application built using React.js and Tailwind CSS as part of the Prodigy InfoTech Web Development Internship (Task-03). The app includes two-player gameplay, winner detection, and a responsive, interactive user interface.",
+                    "image": "assets/Tic-Tac-Toe Web Application.png",
+                    "category": "web",
+                    "technologies": ["React.js", "Vite", "Tailwind CSS", "JavaScript", "HTML5"],
+                    "liveLink": "https://prodigy-wd-03-omega.vercel.app/",
+                    "githubLink": "https://github.com/JDjire/PRODIGY_WD_03"
+                },
+                {
+                    "id": 6,
+                    "title": "Fitness Tracker App",
+                    "description": "A comprehensive fitness tracking application with workout plans, progress tracking, and social features for motivation.",
+                    "image": "assets/project6.jpg",
+                    "category": "mobile",
+                    "technologies": ["Flutter", "Dart", "Firebase", "Charts"],
+                    "liveLink": "https://jiregnadereje.github.io/fitness-tracker-app",
+                    "githubLink": "https://github.com/jiregnadereje/fitness-tracker-app"
+                }
+            ]'>
+                <!-- Projects will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-content">
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h3>HTML5</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90%"></div>
+                        </div>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <h3>CSS3</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85%"></div>
+                        </div>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <h3>JavaScript</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80%"></div>
+                        </div>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <h3>React</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="75%"></div>
+                        </div>
+                        <span class="skill-percentage">75%</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <h3>Node.js</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="70%"></div>
+                        </div>
+                        <span class="skill-percentage">70%</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <h3>Git</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85%"></div>
+                        </div>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h3>Python</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80%"></div>
+                        </div>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Django</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="75%"></div>
+                        </div>
+                        <span class="skill-percentage">75%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's work together!</h3>
+                    <p>
+                        I'm always interested in new opportunities and exciting projects. 
+                        Whether you have a question or just want to say hi, I'll try my 
+                        best to get back to you!
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>jiregnadereje35@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+251 905 275 720</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Addis Ababa, Ethiopia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/JDjire" class="social-link" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/jiregna-dereje-71a3ab29b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/JireDereje1919" class="social-link" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/jiregna_jd?igsh=MTA0OGI2OGtzbzY2Ng==" class="social-link" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" >Send Message</button>
+                    </form> <br>
+                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7SISfqE5SCwqB0vaEbTjcxxmYDmQosMJYewBlqE2ng7KYfA/viewform?usp=sharing&ouid=118332209393945493617" target="_blank" rel="noopener noreferrer">
+                            <button type="submit" class="btn btn-primary">COMMENT</button>
+                        </a>
+                    <div id="form-message" class="form-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Jiregna Dereje. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/jiregnadereje" class="social-link" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/jiregna-dereje" class="social-link" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/jiregnadereje" class="social-link" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/jiregnadereje" class="social-link" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
