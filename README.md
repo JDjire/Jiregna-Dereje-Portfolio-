@@ -16,8 +16,7 @@ Production-ready full-stack developer portfolio built with **React**, **Vite**, 
 
 ```bash
 npm install
-cp .env.example .env
-# Edit .env — set VITE_GITHUB_USERNAME and EmailJS keys
+# Create a local .env file and add VITE_GITHUB_USERNAME and EmailJS keys
 npm run dev
 ```
 
@@ -33,6 +32,7 @@ npm run preview
 | Variable | Description |
 |----------|-------------|
 | `VITE_GITHUB_USERNAME` | Public GitHub username for repos & stats |
+| `VITE_GITHUB_TOKEN` | Optional local-only token for authenticated GitHub stats; never expose it in a public deployment |
 | `VITE_EMAILJS_SERVICE_ID` | EmailJS service ID |
 | `VITE_EMAILJS_TEMPLATE_ID` | EmailJS template ID |
 | `VITE_EMAILJS_PUBLIC_KEY` | EmailJS public key |
