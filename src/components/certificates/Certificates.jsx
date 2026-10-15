@@ -7,24 +7,22 @@ function CertificateCard({ certificate, index }) {
   return (
     <ScrollReveal delay={Math.min(index * 0.05, 0.3)} className="h-full">
       <article className="glass-card interactive-glow overflow-hidden flex flex-col h-full group">
-        <div className="relative aspect-[16/10] overflow-hidden bg-surface-container">
-          <iframe
-            src={`${certificate.file}#toolbar=0&navpanes=0&scrollbar=0`}
-            title={`${certificate.title} preview`}
-            loading="lazy"
-            className="w-full h-full bg-white pointer-events-none"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-surface-container/80 via-transparent to-transparent pointer-events-none" />
+        <div className="relative aspect-[16/10] overflow-hidden bg-surface-container flex flex-col items-center justify-center p-6 text-center">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,212,255,0.14),transparent_65%)]" />
+          <FaFilePdf className="relative w-12 h-12 sm:w-14 sm:h-14 text-primary mb-3" aria-hidden />
+          <p className="relative font-mono text-[10px] sm:text-xs uppercase tracking-widest text-on-surface-variant">
+            PDF Certificate
+          </p>
         </div>
 
         <div className="p-5 sm:p-6 flex flex-col flex-1">
           <div className="flex items-start justify-between gap-4 mb-5">
-          <div className="p-3 rounded-lg bg-primary/10 text-primary shrink-0">
-            <FaFilePdf className="w-6 h-6" aria-hidden />
-          </div>
-          <span className="font-mono text-[10px] sm:text-xs uppercase tracking-wider text-secondary text-right">
-            {certificate.issuer}
-          </span>
+            <div className="p-3 rounded-lg bg-primary/10 text-primary shrink-0">
+              <FaFilePdf className="w-6 h-6" aria-hidden />
+            </div>
+            <span className="font-mono text-[10px] sm:text-xs uppercase tracking-wider text-secondary text-right">
+              {certificate.issuer}
+            </span>
           </div>
 
           <h3 className="font-display text-lg sm:text-xl text-white mb-3 group-hover:text-primary transition-colors">
