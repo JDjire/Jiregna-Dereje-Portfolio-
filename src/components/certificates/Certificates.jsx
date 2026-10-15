@@ -8,11 +8,13 @@ function CertificateCard({ certificate, index }) {
     <ScrollReveal delay={Math.min(index * 0.05, 0.3)} className="h-full">
       <article className="glass-card interactive-glow overflow-hidden flex flex-col h-full group">
         <div className="relative aspect-[16/10] overflow-hidden bg-surface-container flex flex-col items-center justify-center p-6 text-center">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,212,255,0.14),transparent_65%)]" />
-          <FaFilePdf className="relative w-12 h-12 sm:w-14 sm:h-14 text-primary mb-3" aria-hidden />
-          <p className="relative font-mono text-[10px] sm:text-xs uppercase tracking-widest text-on-surface-variant">
-            PDF Certificate
-          </p>
+          <img
+            src={certificate.image}
+            alt={`${certificate.title} certificate`}
+            loading="lazy"
+            decoding="async"
+            className="w-full h-full object-cover object-top"
+          />
         </div>
 
         <div className="p-5 sm:p-6 flex flex-col flex-1">

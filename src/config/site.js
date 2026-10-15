@@ -49,6 +49,7 @@ export const certificates = [
     description:
       'Completed the Programming Fundamentals Nanodegree, strengthening foundational programming knowledge and problem-solving skills.',
     file: '/certificates/Programming_Fundamentals_Nanodegree.pdf',
+    image: '/certificates/previews/Programming_Fundamentals_Nanodegree.png',
     topics: ['python'],
   },
   {
@@ -58,6 +59,7 @@ export const certificates = [
     description:
       'Studied the evolving threat landscape, cyber attacks, digital protection, risk management, and secure-by-design principles.',
     file: '/certificates/Introduction_to_Cybersecurity.pdf',
+    image: '/certificates/previews/Introduction_to_Cybersecurity.png',
     topics: ['web'],
   },
   {
@@ -67,6 +69,7 @@ export const certificates = [
     description:
       'Built a foundation in network fundamentals, IP addressing, switching, routing, protocols, services, and network security.',
     file: '/certificates/Introduction_to_Networks.pdf',
+    image: '/certificates/previews/Introduction_to_Networks.png',
     topics: ['web'],
   },
   {
@@ -76,6 +79,7 @@ export const certificates = [
     description:
       'Participated in four days of practical cybersecurity challenges covering hardening, red team, blue team, investigation, and CTF work.',
     file: '/certificates/CyberShield2026.pdf',
+    image: '/certificates/previews/CyberShield2026.png',
     topics: ['web'],
   },
   {
@@ -85,6 +89,7 @@ export const certificates = [
     description:
       'Participated in an AI-integrated health solution hackathon and collaborated on a diet controller with personalized recommendations.',
     file: '/certificates/Wellness_Hackathon.pdf',
+    image: '/certificates/previews/Wellness_Hackathon.png',
     topics: ['design', 'python'],
   },
   {
@@ -94,6 +99,7 @@ export const certificates = [
     description:
       'Completed extended cybersecurity training covering reconnaissance, network scanning, web security, malware, cryptography, blue team, and CTFs.',
     file: '/certificates/GTST.pdf',
+    image: '/certificates/previews/GTST.png',
     topics: ['web'],
   },
 ];
