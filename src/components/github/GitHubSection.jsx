@@ -8,6 +8,7 @@ import ContributionGraph from './ContributionGraph';
 
 const statCards = [
   { key: 'repos', label: 'Public Repos', icon: FaGithub },
+  { key: 'privateRepos', label: 'Private Repos', icon: FaGithub },
   { key: 'stars', label: 'Total Stars', icon: FaStar },
   { key: 'followers', label: 'Followers', icon: FaUsers },
   { key: 'following', label: 'Following', icon: FaCodeBranch },

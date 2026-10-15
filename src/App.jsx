@@ -12,6 +12,7 @@ const Hero = lazy(() => import('./components/hero/Hero'));
 const About = lazy(() => import('./components/about/About'));
 const Skills = lazy(() => import('./components/skills/Skills'));
 const Projects = lazy(() => import('./components/projects/Projects'));
+const Certificates = lazy(() => import('./components/certificates/Certificates'));
 const GitHubSection = lazy(() => import('./components/github/GitHubSection'));
 const Contact = lazy(() => import('./components/contact/Contact'));
 
@@ -56,6 +57,7 @@ export default function App() {
                 <About />
                 <Skills />
                 <Projects />
+                <Certificates />
                 <GitHubSection />
                 <Contact />
               </Suspense>

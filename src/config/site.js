@@ -21,6 +21,7 @@ export const siteConfig = {
   nav: [
     { label: 'Portfolio', href: '#portfolio' },
     { label: 'Skills', href: '#skills' },
+    { label: 'Certificates', href: '#certificates' },
     { label: 'GitHub', href: '#github' },
     { label: 'Contact', href: '#contact' },
   ],
@@ -39,6 +40,63 @@ export const skills = [
 ];
 
 export const projectFilters = ['all', 'web', 'mobile', 'design', 'react', 'python'];
+
+export const certificates = [
+  {
+    id: 'programming-fundamentals',
+    title: 'Programming Fundamentals Nanodegree',
+    issuer: 'Udacity',
+    description:
+      'Completed the Programming Fundamentals Nanodegree, strengthening foundational programming knowledge and problem-solving skills.',
+    file: '/certificates/Programming_Fundamentals_Nanodegree.pdf',
+    topics: ['python'],
+  },
+  {
+    id: 'introduction-to-cybersecurity',
+    title: 'Introduction to Cybersecurity',
+    issuer: 'Cisco Networking Academy',
+    description:
+      'Studied the evolving threat landscape, cyber attacks, digital protection, risk management, and secure-by-design principles.',
+    file: '/certificates/Introduction_to_Cybersecurity.pdf',
+    topics: ['web'],
+  },
+  {
+    id: 'introduction-to-networks',
+    title: 'CCNA: Introduction to Networks',
+    issuer: 'Cisco Networking Academy',
+    description:
+      'Built a foundation in network fundamentals, IP addressing, switching, routing, protocols, services, and network security.',
+    file: '/certificates/Introduction_to_Networks.pdf',
+    topics: ['web'],
+  },
+  {
+    id: 'cybershield-2026',
+    title: 'Ethiopian CyberShield 2026',
+    issuer: 'ALX Ethiopia and partners',
+    description:
+      'Participated in four days of practical cybersecurity challenges covering hardening, red team, blue team, investigation, and CTF work.',
+    file: '/certificates/CyberShield2026.pdf',
+    topics: ['web'],
+  },
+  {
+    id: 'wellness-hackathon',
+    title: 'Wellness Hackathon 2026',
+    issuer: 'ALX Ethiopia',
+    description:
+      'Participated in an AI-integrated health solution hackathon and collaborated on a diet controller with personalized recommendations.',
+    file: '/certificates/Wellness_Hackathon.pdf',
+    topics: ['design', 'python'],
+  },
+  {
+    id: 'geez-security',
+    title: 'Cybersecurity Training',
+    issuer: 'Geez Security',
+    description:
+      'Completed extended cybersecurity training covering reconnaissance, network scanning, web security, malware, cryptography, blue team, and CTFs.',
+    file: '/certificates/GTST.pdf',
+    topics: ['web'],
+  },
+];
 
 export const featuredProjects = [
   {
