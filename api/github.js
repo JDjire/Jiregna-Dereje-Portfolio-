@@ -27,6 +27,9 @@ export default async function handler(req, res) {
     const user = await githubFetch(
       process.env.GITHUB_TOKEN ? '/user' : `/users/${username}`
     );
+    const publicRepos = await githubFetch(
+      `/users/${username}/repos?per_page=100`
+    );
     let privateRepoCount = 0;
 
     if (process.env.GITHUB_TOKEN) {
@@ -44,6 +47,10 @@ export default async function handler(req, res) {
         following: user.following,
       },
       privateRepoCount,
+      totalStars: publicRepos.reduce(
+        (total, repo) => total + (repo.stargazers_count || 0),
+        0
+      ),
     });
   } catch (error) {
     return res.status(502).json({ error: error.message });
