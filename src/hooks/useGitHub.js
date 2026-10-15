@@ -14,7 +14,6 @@ async function fetchJson(url) {
 
 export function useGitHub() {
   const [repos, setRepos] = useState([]);
-  const [privateRepoCount, setPrivateRepoCount] = useState(0);
   const [totalStars, setTotalStars] = useState(0);
   const [user, setUser] = useState(null);
   const [contributions, setContributions] = useState([]);
@@ -31,7 +30,6 @@ export function useGitHub() {
         `/api/github?username=${encodeURIComponent(USERNAME)}`
       );
       setUser(githubData.user);
-      setPrivateRepoCount(githubData.privateRepoCount);
       setTotalStars(githubData.totalStars);
 
       try {
@@ -54,7 +52,6 @@ export function useGitHub() {
         setContributions([]);
       }
     } catch (err) {
-      setPrivateRepoCount(0);
       setTotalStars(0);
       setError(
         err.status === 403 ? 'GitHub API rate limit reached.' : err.message
@@ -71,14 +68,12 @@ export function useGitHub() {
   const stats = user
     ? {
         repos: user.public_repos,
-        privateRepos: privateRepoCount,
         followers: user.followers,
         following: user.following,
         stars: totalStars,
       }
     : {
         repos: repos.length,
-        privateRepos: privateRepoCount,
         followers: 0,
         following: 0,
         stars: totalStars,

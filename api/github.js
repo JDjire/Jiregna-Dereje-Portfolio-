@@ -6,7 +6,7 @@ async function githubFetch(path) {
     'User-Agent': 'Jiregna-Dereje-Portfolio',
   };
   if (process.env.GITHUB_TOKEN) {
-    headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
+    headers.Authorization = ['Bearer', process.env.GITHUB_TOKEN].join(' ');
   }
 
   const response = await fetch(`${GITHUB_API}${path}`, { headers });
@@ -30,14 +30,6 @@ export default async function handler(req, res) {
     const publicRepos = await githubFetch(
       `/users/${username}/repos?per_page=100`
     );
-    let privateRepoCount = 0;
-
-    if (process.env.GITHUB_TOKEN) {
-      const privateRepos = await githubFetch(
-        '/user/repos?visibility=private&affiliation=owner&per_page=100'
-      );
-      privateRepoCount = privateRepos.length;
-    }
 
     return res.status(200).json({
       user: {
@@ -46,7 +38,6 @@ export default async function handler(req, res) {
         followers: user.followers,
         following: user.following,
       },
-      privateRepoCount,
       totalStars: publicRepos.reduce(
         (total, repo) => total + (repo.stargazers_count || 0),
         0

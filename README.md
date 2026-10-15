@@ -31,7 +31,7 @@ npm run preview
 | Variable | Description |
 |----------|-------------|
 | `VITE_GITHUB_USERNAME` | Public GitHub username for repos & stats |
-| `GITHUB_TOKEN` | Optional server-only token for authenticated GitHub stats on Vercel; never use the `VITE_` prefix |
+| `GITHUB_TOKEN` | Optional server-only token for GitHub API rate limits; never use the `VITE_` prefix |
 | `VITE_EMAILJS_SERVICE_ID` | EmailJS service ID |
 | `VITE_EMAILJS_TEMPLATE_ID` | EmailJS template ID |
 | `VITE_EMAILJS_PUBLIC_KEY` | EmailJS public key |
