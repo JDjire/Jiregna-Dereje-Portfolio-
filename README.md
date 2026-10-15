@@ -11,7 +11,38 @@ Production-ready full-stack developer portfolio built with **React**, **Vite**, 
 - Contact form with validation (EmailJS or Formspree)
 - Dark / light mode, magnetic CTAs, scroll animations, mouse parallax
 - Code splitting, lazy loading, SEO (react-helmet-async), accessibility (skip link, ARIA)
-  
+## Quick start
+
+```bash
+npm install
+# Create a local .env file and add VITE_GITHUB_USERNAME and EmailJS keys
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+npm run preview
+```
+
+## Environment variables
+
+| Variable | Description |
+|----------|-------------|
+| `VITE_GITHUB_USERNAME` | Public GitHub username for repos & stats |
+| `GITHUB_TOKEN` | Optional server-only token for authenticated GitHub stats on Vercel; never use the `VITE_` prefix |
+| `VITE_EMAILJS_SERVICE_ID` | EmailJS service ID |
+| `VITE_EMAILJS_TEMPLATE_ID` | EmailJS template ID |
+| `VITE_EMAILJS_PUBLIC_KEY` | EmailJS public key |
+| `VITE_FORMSPREE_ENDPOINT` | Optional Formspree URL fallback |
+
+Without GitHub username, curated sample projects are shown. Without EmailJS/Formspree, the form runs in demo mode (console log).
+
+## Customize
+
+Edit `src/config/site.js` for name, bio, social links, typing phrases, and featured projects.
+
 ## Performance
 
 - Manual chunks for `three` and `framer-motion`

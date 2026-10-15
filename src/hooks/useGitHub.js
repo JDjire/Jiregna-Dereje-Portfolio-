@@ -2,13 +2,8 @@ import { useCallback, useEffect, useState } from 'react';
 import { featuredProjects } from '../config/site';
 
 const USERNAME = import.meta.env.VITE_GITHUB_USERNAME?.trim() || 'JDjire';
-const TOKEN = import.meta.env.VITE_GITHUB_TOKEN?.trim() || '';
-
 async function fetchJson(url) {
-  const headers = { Accept: 'application/vnd.github+json' };
-  if (TOKEN) headers.Authorization = ['Bearer', TOKEN].join(' ');
-
-  const res = await fetch(url, { headers });
+  const res = await fetch(url);
   if (!res.ok) {
     const error = new Error(`GitHub API: ${res.status}`);
     error.status = res.status;
@@ -31,18 +26,11 @@ export function useGitHub() {
     setRepos(featuredProjects);
 
     try {
-      const [userData, privateRepoData] = await Promise.all([
-        fetchJson(TOKEN ? 'https://api.github.com/user' : `https://api.github.com/users/${USERNAME}`),
-        TOKEN
-          ? fetchJson(
-              'https://api.github.com/user/repos?visibility=private&affiliation=owner&per_page=100'
-            )
-          : Promise.resolve([]),
-      ]);
-      setUser(userData);
-      setPrivateRepoCount(
-        userData.owned_private_repos ?? userData.total_private_repos ?? privateRepoData.length
+      const githubData = await fetchJson(
+        `/api/github?username=${encodeURIComponent(USERNAME)}`
       );
+      setUser(githubData.user);
+      setPrivateRepoCount(githubData.privateRepoCount);
 
       try {
         const contribRes = await fetch(
@@ -66,9 +54,7 @@ export function useGitHub() {
     } catch (err) {
       setPrivateRepoCount(0);
       setError(
-        err.status === 403
-          ? 'GitHub API rate limit reached. Add VITE_GITHUB_TOKEN for live data.'
-          : err.message
+        err.status === 403 ? 'GitHub API rate limit reached.' : err.message
       );
     } finally {
       setLoading(false);
